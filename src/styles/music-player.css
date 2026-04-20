@@ -370,6 +370,55 @@ button {
   accent-color: var(--accent);
 }
 
+@keyframes shimmer {
+  0% { background-position: -600px 0; }
+  100% { background-position: 600px 0; }
+}
+
+.skeleton {
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.13) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 1200px 100%;
+  animation: shimmer 1.5s infinite ease-in-out;
+}
+
+.skeleton-row {
+  pointer-events: none;
+  cursor: default;
+}
+
+.skeleton-index {
+  width: 24px;
+  height: 13px;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+.skeleton-cover {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.skeleton-title {
+  height: 13px;
+  width: 58%;
+  border-radius: 5px;
+  margin-bottom: 6px;
+}
+
+.skeleton-artist {
+  height: 10px;
+  width: 38%;
+  border-radius: 4px;
+}
+
 .empty-state,
 .empty-page {
   color: var(--muted);

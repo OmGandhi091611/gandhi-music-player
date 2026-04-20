@@ -14,6 +14,7 @@ function App() {
   const [durationSeconds, setDurationSeconds] = useState(0);
   const [volume, setVolume] = useState(0.85);
   const [view, setView] = useState("library");
+  const [loading, setLoading] = useState(true);
 
   const safeSongs = useMemo(() => {
     return songs.map((song, index) => ({
@@ -37,6 +38,11 @@ function App() {
       );
     });
   }, [search, safeSongs]);
+
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 450);
+    return () => clearTimeout(t);
+  }, []);
 
   useEffect(() => {
     if (!audioRef.current) return;
@@ -143,6 +149,7 @@ function App() {
               currentSongId={currentSong.id}
               isPlaying={isPlaying}
               onSongSelect={handleSongSelect}
+              loading={loading}
             />
           </section>
         </main>

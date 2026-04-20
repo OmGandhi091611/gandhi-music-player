@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "generate": "node scripts/generate-playlist.js",
+    "predev": "node scripts/generate-playlist.js",
     "dev": "vite",
+    "prebuild": "node scripts/generate-playlist.js",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

@@ -1,3 +1,6 @@
+// Auto-generated — do not edit directly.
+// Curated entries live in src/data/manual.js.
+// New mp3 files in public/audio/ are added automatically on next dev/build.
 export const songs = [
   {
     id: "t1",
@@ -292,5 +295,29 @@ export const songs = [
     title: "uNaruto Shippuuden OST 2",
     artist: "Instrumental",
     src: "/audio/Track 18 - Naruto Shippuuden OST 2 - Kokuten.mp3",
+  },
+  {
+    id: "auto-1001",
+    title: "AURORA - Runaway",
+    artist: "",
+    src: "/audio/AURORA - Runaway.mp3",
+  },
+  {
+    id: "auto-1002",
+    title: "Athdaya Kare Chhe",
+    artist: "Love Ni Bhavai",
+    src: "/audio/Athdaya Kare Chhe  Full Audio Song  Love Ni Bhavai  Sachin-Jigar  Punit Gandhi & Smita Jain.mp3",
+  },
+  {
+    id: "auto-1003",
+    title: "Avicii - The Nights",
+    artist: "",
+    src: "/audio/Avicii - The Nights.mp3",
+  },
+  {
+    id: "auto-1004",
+    title: "The Soul of Radhe Shyam",
+    artist: "Prabhas",
+    src: "/audio/The Soul of Radhe Shyam  Prabhas  Pooja Hegde  Radha Krishna Kumar  Thaman S  UV Creations.mp3",
   },
 ];

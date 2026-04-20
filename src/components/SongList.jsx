@@ -1,6 +1,31 @@
 import CoverArt from "./CoverArt";
 
-function SongList({ songs, currentSongId, isPlaying, onSongSelect }) {
+function SkeletonRow() {
+  return (
+    <div className="song-row skeleton-row" aria-hidden="true">
+      <div className="skeleton skeleton-index" />
+      <div className="skeleton skeleton-cover" />
+      <div className="song-meta-mobile">
+        <div className="skeleton skeleton-title" />
+        <div className="skeleton skeleton-artist" />
+      </div>
+    </div>
+  );
+}
+
+function SongList({ songs, currentSongId, isPlaying, onSongSelect, loading }) {
+  if (loading) {
+    return (
+      <div className="song-list-scroll">
+        <div className="song-list">
+          {Array.from({ length: 9 }).map((_, i) => (
+            <SkeletonRow key={i} />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   if (!songs.length) {
     return (
       <div className="empty-state">
