@@ -4,7 +4,8 @@
       "Bash(node *)",
       "Bash(npm run *)",
       "Bash(curl -s http://localhost:5174)",
-      "Bash(kill %1)"
+      "Bash(kill %1)",
+      "Bash(grep -v \"^$\")"
     ]
   }
 }

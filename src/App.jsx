@@ -127,6 +127,7 @@ function App() {
       <audio
         ref={audioRef}
         src={currentSong.src}
+        preload="metadata"
         onLoadedMetadata={handleLoadedMetadata}
         onTimeUpdate={handleTimeUpdate}
         onEnded={handleNext}

@@ -37,7 +37,7 @@ async function main() {
   let files = [];
   try {
     files = readdirSync(audioDir)
-      .filter((f) => /\.mp3$/i.test(f))
+      .filter((f) => /^(?!\._).+\.(mp3|m4a|aac|ogg|flac|wav)$/i.test(f))
       .sort();
   } catch {
     console.warn('Could not read audio directory:', audioDir);
